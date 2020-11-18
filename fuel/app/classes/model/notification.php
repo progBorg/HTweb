@@ -39,7 +39,11 @@ class Model_Notification extends \Orm\Model {
 	];
 	
 	public static function scrub() {
-		static::query()->where(\DB::expr('DATE_ADD(created, INTERVAL 7 DAY)'), '<', \DB::expr('CURDATE()'))->delete();
+		try {
+			static::query()->where(\DB::expr('DATE_ADD(created, INTERVAL 7 DAY)'), '<', \DB::expr('CURDATE()'))->delete();
+		} catch (\Exception $e) {
+			// Don't do anything yet
+		}
 	}
 
 	public static function get_unread_count($user_id) : int {
