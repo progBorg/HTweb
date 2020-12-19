@@ -5,12 +5,7 @@
 /public/files/*
 
 # The fuelphp core
-/fuel/core/*
-
-# To include PHP74 fix for core security.php
-!/fuel/core/classes/
-/fuel/core/classes/*
-!/fuel/core/classes/security.php
+/fuel/core/
 
 # ==================
 # Created by https://www.toptal.com/developers/gitignore/api/fuelphp,phpstorm+all,netbeans,windows,linux,git,composer
