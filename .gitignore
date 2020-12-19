@@ -7,6 +7,11 @@
 # The fuelphp core
 /fuel/core/*
 
+# To include PHP74 fix for core security.php
+!/fuel/core/classes/
+/fuel/core/classes/*
+!/fuel/core/classes/security.php
+
 # ==================
 # Created by https://www.toptal.com/developers/gitignore/api/fuelphp,phpstorm+all,netbeans,windows,linux,git,composer
 # Edit at https://www.toptal.com/developers/gitignore?templates=fuelphp,phpstorm+all,netbeans,windows,linux,git,composer
