@@ -43,7 +43,7 @@ class CustomRules {
 		
 		// Calc mod 97 of each section (length 5)
 		do {
-			$a = (int)$result . substr($iban_numbers, 0, 5);
+			$a = (int) ($result . substr($iban_numbers, 0, 5));
 			$iban_numbers = substr($iban_numbers, 5);
 			$result = $a % 97;
 		}
