@@ -12,7 +12,7 @@ DB_PASS="123"
 # Declare project root directory and FuelPHP profile
 PROJECTDIR="htweb"
 PROFILE="development"
-FUEL_ENV=$PROFILE
+export FUEL_ENV=$PROFILE
 
 # Don't touch these
 CURDIR="${PWD##*/}"
