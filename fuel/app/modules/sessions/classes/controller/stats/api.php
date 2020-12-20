@@ -36,7 +36,7 @@ class Controller_Stats_Api extends \Api\Controller_Auth {
 				->execute()
 				->as_array()[0]['checksum'];
 		
-		$min_points;
+		$min_points = 0;
 		$next_cook = '';
 		$result = [];
 		foreach($active_users as $user) {

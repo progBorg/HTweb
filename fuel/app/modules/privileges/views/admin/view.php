@@ -1,6 +1,7 @@
 <?php
 $participants = $permission->users;
 
+$user_options = [];
 foreach(Model_User::get_by_state() as $user) {
 	$user_options[$user->id] = $user->get_fullname();
 }
