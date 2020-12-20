@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Author: Melcher Stikkelorum
 
 # Set to true always use default credentials
