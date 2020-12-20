@@ -24,7 +24,7 @@ Get the latest release of Composer on your device, preferably using your system'
 
 ### FuelPHP
 Browse to the root of the project (where the `composer.json` file lives).
-Download and install FuelPHP using `composer update --prefer-source`.
+Download and install FuelPHP using `composer update`.
 
 For production environments, you may consider appending the `--no-dev` option.
 
