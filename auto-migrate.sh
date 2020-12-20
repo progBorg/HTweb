@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Author: Melcher Stikkelorum
 
 # Set to true always use default credentials
@@ -12,6 +12,7 @@ DB_PASS="123"
 # Declare project root directory and FuelPHP profile
 PROJECTDIR="htweb"
 PROFILE="development"
+export FUEL_ENV=$PROFILE
 
 # Don't touch these
 CURDIR="${PWD##*/}"
