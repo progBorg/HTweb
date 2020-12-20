@@ -26,8 +26,6 @@ Get the latest release of Composer on your device, preferably using your system'
 Browse to the root of the project (where the `composer.json` file lives).
 Download and install FuelPHP using `composer update --prefer-source`.
 
-Please note the `--prefer-source` option. The currently bundled version of FuelPHP 1.8.2 is not up-to-date with the version on Github, which contains some fixes to make it run on PHP 7.4.
-
 For production environments, you may consider appending the `--no-dev` option.
 
 ## Configuration
@@ -36,7 +34,7 @@ For production environments, you may consider appending the `--no-dev` option.
 Create an empty database. Edit the configuration files that reside in the `/fuel/app/config` directory.
 Be sure to enter your database credentials in the `db.php` file. Perhaps also have a look at `auth.php`, `ormauth.php` and `config.php`.
 
-### Production environtments
+### Production environments
 For production environments, please be sure to configure and update the salts in both `auth.php` and `ormauth.php` as well.
 
 ## Migrations
