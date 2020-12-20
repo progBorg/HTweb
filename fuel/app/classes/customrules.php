@@ -21,12 +21,15 @@ class CustomRules {
 	 * @param type $iban
 	 * @return boolean
 	 */
-	public static function _validation_valid_iban($iban=null) {
+	public static function _validation_valid_iban(string $iban=null) {
 		// Pass on empty
 		if(empty($iban)) {
 			return true;
 		}
-		
+
+		// Remove spaces
+		$iban = str_replace(' ', '', $iban);
+
 		// Create shifted version (bank id at the end)
 		$iban = strtolower($iban);
 		$iban_shifted_arr = str_split(substr($iban, 4) . substr($iban,0,4));
