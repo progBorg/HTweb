@@ -31,7 +31,8 @@ class Controller_Users extends Controller_Core_Theme
 
 	public function action_edit()	{
 		$user = \Model_User::get_current();
-		$val = \Model_User::validate('edit');			
+		$val = \Model_User::validate('edit');
+		$val->add_field('old_password', 'Vorig wachtwoord', 'min_length[1]');
 		$val->add_field('password', 'Wachtwoord', 'min_length[5]');
 		$val->add_field('password2', 'Wachtwoord', 'required_with[password]|match_field[password]');
 		
