@@ -1,19 +1,24 @@
 #!/usr/bin/env bash
 # Author: Melcher Stikkelorum
+# Co-Author: Tom Veldman
+
+#====================
+# You may edit the below parameters
 
 # Set to true always use default credentials
 USE_DEFAULTS=true
 
 # Declare database credentials
-DB_NAME="htweb_dev"
-DB_USER="root"
-DB_PASS="123"
+DB_NAME="HVOweb"
+DB_USER="username"
+DB_PASS="password"
 
 # Declare project root directory and FuelPHP profile
-PROJECTDIR="htweb"
-PROFILE="development"
+PROJECTDIR="HVOweb"
+PROFILE="production"
 export FUEL_ENV=$PROFILE
 
+#====================
 # Don't touch these
 CURDIR="${PWD##*/}"
 MIG_FILE="$PWD/fuel/app/config/$PROFILE/migrations.php"

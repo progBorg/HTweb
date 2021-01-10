@@ -4,6 +4,9 @@
 # Local specific files
 /public/files/*
 
+# Contains some user-specific settings that may be ignored
+auto-migrate.sh
+
 # The fuelphp core
 /fuel/core/
 
