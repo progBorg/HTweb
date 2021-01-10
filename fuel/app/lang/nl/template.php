@@ -1,17 +1,25 @@
 <?php
 
 return array(
-	'site_title' => 'Het Tribunaal',
+	'site_title' => 'Het Verre Oosten',
 	'site_sub' => 'Web',
 	'login' => 'Inloggen',
 	'logout' => 'Uitloggen',
 	'settings' => 'Instellingen',
-	'not_found' => 'Niet gevonden',
-	'no_access' => 'Geen toegang',
 	'me' => 'Profiel bekijken',
 	'render' => 'Pagina geladen in {exec_time}s met {mem_usage}mb geheugen.',
-	'fuel' => 'Gebouwd met FuelPHP ',
+	'fuel' => 'Gebouwd met FuelPHP 1.8.3',
 	'github' => 'Bijdragen op GitHub',
-	'product_name' => 'HTweb',
+	'product_name' => 'HVOweb',
 	'dev' => 'ontwikkeld door',
+	'state' => '',
+	'403' => [
+		'title' => 'Geen toegang',
+		'msg' => 'Je hebt geen toestemming om the gevraagde actie uit te voeren op deze server.'
+	],
+	'404' => [
+		'title' => 'Niet gevonden',
+		'msg' => 'De gevraagde pagina kon niet worden gevonden',
+		'msg_exception' => 'De server zegt het volgende: :msg',
+	]
   );

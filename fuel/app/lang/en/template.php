@@ -1,16 +1,16 @@
 <?php
 
 return array(
-	'site_title' => 'Het Tribunaal',
+	'site_title' => 'Het Verre Oosten',
 	'site_sub' => 'Web',
-	'login' => 'Log-in',
-	'logout' => 'Log-out',
+	'login' => 'Log in',
+	'logout' => 'Log out',
 	'settings' => 'Settings',
 	'me' => 'View profile',
 	'render' => 'Page rendered in {exec_time}s using {mem_usage}mb of memory.',
-	'fuel' => 'Build using FuelPHP ',
+	'fuel' => 'Build using FuelPHP 1.8.3',
 	'github' => 'Contribute on GitHub',
-	'product_name' => 'HTweb',
+	'product_name' => 'HVOweb',
 	'dev' => 'developed by',
 	'state' => '',
 	'403' => [
