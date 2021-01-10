@@ -30,15 +30,11 @@
 <body>
 	<?=$partials['navbar']?>
 	<div class="container">
+		<?=$partials['header']?>
 		<div class="row">
-			<?=$partials['header']?>
-		</div>
-		<div class="row">	
 			<?=$content?>
 		</div>
-		<div class="row">
-			<?=$partials['footer']?>		
-		</div>
+		<?=$partials['footer']?>
 	</div>
 </body>
 </html>

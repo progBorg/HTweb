@@ -11,7 +11,7 @@ return array(
 	'fuel' => 'Build using FuelPHP 1.8.3',
 	'github' => 'Contribute on GitHub',
 	'product_name' => 'HVOweb',
-	'dev' => 'developed by',
+	'dev' => 'Developed by',
 	'state' => '',
 	'403' => [
 		'title' => 'Forbidden',

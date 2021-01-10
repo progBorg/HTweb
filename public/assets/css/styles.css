@@ -2,10 +2,6 @@
     Created on : Nov 30, 2016, 6:00:57 PM
     Author     : Melcher
 */
-body { 
-	margin: 60px; 
-}
-
 .modal-open[style] {		
 	padding-right: 0px !important;		
 }	
@@ -128,5 +124,30 @@ td a {
 	white-space: normal !important;
 }
 
-
-
+/* Make the footer stay at the bottom of the page */
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+body > .container {
+	min-height: calc(100% - 60px); /* Give space for navbar */
+	position: relative;
+	top: 60px;
+	padding-bottom: 118px; /* Give space for footer */
+}
+footer {
+	position: absolute;
+	bottom: 0;
+	height: 118px;
+	width: 100%;
+}
+/* Increase footer space on mobile */
+@media (max-width: 767px) {
+	body > .container {
+		padding-bottom: 150px;
+	}
+	footer {
+		height: 150px;
+	}
+}
