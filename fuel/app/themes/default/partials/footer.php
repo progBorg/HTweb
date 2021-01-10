@@ -3,7 +3,8 @@
 
 	<div class="col-sm-4 col-sm-push-4">
 		<p class="text-center">
-			<span class="fa fa-bank"></span> <?=__('product_name')?>
+			<?= \Fuel\Core\Html::img('assets/img/logo/logo_small.svg', ['width' => '24px', 'class' => 'filter-text-color', 'style' => 'padding-bottom: 2pt']) ?>
+			<?=__('product_name')?>
 		</p>
 	</div>
 
@@ -20,8 +21,8 @@
 	<div class="col-sm-4 col-xs-6">
 		<p class="text-right text-muted">
 			<small>
-				<a href="https://github.com/ProgBorg/HVOweb" target="_blank">
-					<i class="fa fa-github"></i> <u class="text-muted"> <?=__('github')?></u>
+				<a href="https://github.com/ProgBorg/HVOweb" target="_blank" class="text-muted">
+					<i class="fa fa-github"></i> <u> <?=__('github')?></u>
 				</a> <br />
 				<?=__('fuel')?> <br />
 				<strong><?=\FUEL::$env.' / '.\Utils::current_branch() . ' / ' . \Utils::get_short_head()?></strong>

@@ -124,7 +124,9 @@ td a {
 	white-space: normal !important;
 }
 
-/* Make the footer stay at the bottom of the page */
+/*
+	Make the footer stay at the bottom of the page
+*/
 html, body {
 	margin: 0;
 	padding: 0;
@@ -142,12 +144,40 @@ footer {
 	height: 118px;
 	width: 100%;
 }
-/* Increase footer space on mobile */
 @media (max-width: 767px) {
+	/* Increase footer space on mobile */
 	body > .container {
 		padding-bottom: 150px;
 	}
 	footer {
 		height: 150px;
 	}
+}
+
+/*	Define some SVG filters.
+	SVG must be black, else prepend brightness(0) saturate(100%) to filter property.
+	https://codepen.io/sosuke/pen/Pjoqqp
+ */
+.filter-white {
+	filter: invert(100%);
+}
+.filter-rsk-orange {
+	filter: invert(47%) sepia(90%) saturate(2492%) hue-rotate(1deg) brightness(104%) contrast(105%);
+}
+.filter-text-color {
+	filter: invert(22%) sepia(23%) saturate(667%) hue-rotate(169deg) brightness(97%) contrast(98%);
+}
+.filter-link-color {
+	filter: invert(66%) sepia(17%) saturate(4893%) hue-rotate(122deg) brightness(91%) contrast(81%);
+}
+
+/* Enable link color on recolored SVG images */
+
+a:hover img[class*="filter-"] {
+	filter: invert(66%) sepia(17%) saturate(4893%) hue-rotate(122deg) brightness(91%) contrast(81%);
+}
+
+/* Make navbar cut off overflow */
+.navbar {
+	overflow: hidden;
 }
