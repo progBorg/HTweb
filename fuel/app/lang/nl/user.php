@@ -22,7 +22,7 @@ return array(
 		'group' => 'Groep'
 	),
 	'language' => [
-		'en' => 'Engels',
+		'en' => 'English',
 		'nl' => 'Nederlands',
 	],	
 	'alert' => array(
@@ -33,7 +33,7 @@ return array(
 			'no_id' => 'Kan gebruiker met id <strong>:id</strong> niet vinden.',
 			'cur_pass' => 'Huidig wachtwoord incorrect.',
 			'update' => 'Kan gebruiker niet bijwerken',
-			'invalid_iban' => 'De ingevulde <strong>:label</strong> is niet een correct International Bank Acoount Number (IBAN)',
+			'invalid_iban' => 'De ingevulde <strong>:label</strong> is geen correct IBAN',
 			'invalid_lang' => 'De geselecteerde <strong>:label</strong> is niet geldig.',
 		),
 	),

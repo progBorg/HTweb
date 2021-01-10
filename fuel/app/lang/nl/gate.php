@@ -22,9 +22,9 @@ return [
 		],
 		'mail' => [
 			'subject' => 'Wachtwoord reset aanvrag',
-			'body' => 'Er is een wachtwoord reset aanvrag gedaan voor het account op ' . __('site_title') . ' ' . __('site_sub') . ' dat geregistreerd staat met dit mail adres.' .
+			'body' => 'Hoihoi, <br><br>Er is een wachtwoord reset aangevraagd voor het account op ' . __('site_title') . ' ' . __('site_sub') . ' dat geregistreerd staat met dit emailadres.' .
 			'Negeeer deze mail als je geen aanvraag hebt ingedient. Om je wachtwoord te resetten klik je op onderstaande link: <br><br>' .
-			'http://:link <br><br> --Admin',
+			'https://:link <br><br> --HVOweb Admin',
 		],
 	],
 	'alert' => [

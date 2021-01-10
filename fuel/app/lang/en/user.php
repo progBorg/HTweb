@@ -23,7 +23,7 @@ return array(
 	),
 	'language' => [
 		'en' => 'English',
-		'nl' => 'Dutch',
+		'nl' => 'Nederlands',
 	],	
 	'alert' => array(
 		'success' => [
@@ -33,7 +33,7 @@ return array(
 			'no_id' => 'Cannot not find user with id <strong>:id</strong>.',
 			'cur_pass' => 'Current password is incorrect.',
 			'update' => 'Cannot update user settings.',
-			'invalid_iban' => 'The entered <strong>:label</strong> is not a valid International Bank Acoount Number (IBAN)',
+			'invalid_iban' => 'The entered <strong>:label</strong> is not a valid IBAN',
 			'invalid_lang' => 'The selected </strong>:label</strong> is invalid.',
 		),
 	),

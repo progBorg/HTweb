@@ -6,8 +6,12 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="/"><span class="fa fa-bank"></span> <?=__('site_title')?> <small><?=__('site_sub')?></small>  
-				<sup><span class="badge"><?=__('state')?></span></sup>
+			<a class="navbar-brand" href="/" style="padding-top: 3px">
+				<?= \Fuel\Core\Html::img('assets/img/logo/logo.svg', ['width' => '82px', 'class' => 'filter-white', 'style' => 'display: inline-block']) ?>
+				<span style="display: inline-block;vertical-align: 12px;">
+					<?=__('site_title')?> <small><?=__('site_sub')?></small>
+					<sup><span class="badge"><?=__('state')?></span></sup>
+				</span>
 			</a>
 		</div>
 		<div class="navbar-collapse collapse">
