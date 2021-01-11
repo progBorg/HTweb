@@ -154,7 +154,7 @@ footer {
 	}
 }
 
-/*	Define some SVG filters.
+/*	Define some SVG filters to change their color.
 	SVG must be black, else prepend brightness(0) saturate(100%) to filter property.
 	https://codepen.io/sosuke/pen/Pjoqqp
  */
