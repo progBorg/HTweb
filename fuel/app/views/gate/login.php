@@ -1,6 +1,5 @@
-<div class="row">
-	<p><?=__('gate.login.msg')?></p>
-	<div class="col-md-3">
+<div class="col-md-4 col-md-push-4 col-sm-6 col-sm-push-3 login-container">
+	<div class="center-block login-form">
 		<?=Form::open()?>
 			<?php if (Input::get('destination') !== null): ?>
 				<?=Form::hidden('destination', Input::get('destination')); ?>
@@ -12,7 +11,7 @@
 
 			<div class="form-group <?=! $val->error('email') ?: 'has-error' ?>">
 				<?=Form::label(__('gate.login.label.username'), 'email')?>
-				<?=Form::input('email', Input::post('email'), ['class' => 'form-control', 'placeholder' => __('gate.login.label.username'), 'autofocus'])?>
+				<?=Form::input('email', Input::post('email'), ['class' => 'form-control', 'placeholder' => __('gate.login.label.username'), 'autofocus', 'required'])?>
 
 				<?php if ($val->error('email')): ?>
 					<span class="control-label"><?=$val->error('email')->get_message('You must provide a username or email')?></span>
@@ -21,7 +20,7 @@
 
 			<div class="form-group <?=! $val->error('password') ?: 'has-error' ?>">
 				<?=Form::label(__('gate.login.label.pass'), 'password')?>
-				<?=Form::password('password', null, ['class' => 'form-control', 'placeholder' => __('gate.login.label.pass')])?>
+				<?=Form::password('password', null, ['class' => 'form-control', 'placeholder' => __('gate.login.label.pass'), 'required'])?>
 
 				<?php if ($val->error('password')): ?>
 					<span class="control-label"><?=$val->error('password')->get_message(':label cannot be blank'); ?></span>
