@@ -10,7 +10,7 @@
 	
 	echo Asset::css([
 		'font-awesome.css',
-		'styles.css',
+		'general.css',
 		]); 
 	
 	foreach ($add_css as $sheet) { 
