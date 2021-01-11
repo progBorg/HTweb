@@ -178,7 +178,7 @@ a:hover img[class*="filter-"] {
 }
 
 /* Make navbar cut off overflow */
-.navbar {
+.navbar .navbar-brand {
 	overflow: hidden;
 }
 
