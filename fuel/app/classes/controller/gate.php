@@ -69,11 +69,21 @@ class Controller_Gate extends Controller_Core_Theme
 	public function get_login_image() {
 		// Read login/ directory in image assets to find available pictures
 		$image_dir = DOCROOT . Config::get('asset.paths.0') . Config::get('asset.img_dir') . 'login/';
-		$images = File::read_dir($image_dir);
+		$images = File::read_dir($image_dir, 1, [
+			// only get PNGs, JPGs and JPEGs
+			'\.png$' => 'file',
+			'\.jpg$' => 'file',
+			'\.jpeg$' => 'file'
+		]);
+		// Return a 404 if no images were found
+		if (is_null($images) or sizeof($images) == 0) {
+			throw new \Fuel\Core\HttpNotFoundException;
+		}
+
 		// Choose a random image
 		$image_string = $images[array_rand($images, 1)];
 
-		// Get full image path and
+		// Get full image path and the mimetype
 		$image_path = $image_dir . $image_string;
 		$image_mimetype = File::file_info($image_path)['mimetype'];
 
