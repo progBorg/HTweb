@@ -1,0 +1,57 @@
+#background {
+	background-image: url("/gate/login_image");
+	height: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	-webkit-animation: fadein 2s ease 1s;
+	-moz-animation: fadein 2s ease 1s;
+	-o-animation: fadein 2s ease 1s;
+	animation: fadein 2s ease 1s;
+}
+@-webkit-keyframes fadein {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+@-moz-keyframes fadein {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+@-o-keyframes fadein {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+@keyframes fadein {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+.login-form {
+	padding: 20pt;
+	border-radius: 5pt;
+	background-color: #fffd;
+}
+
+footer {
+	background-color: #fffd;
+	height: auto;
+	padding-top: 8pt;
+}
+@media (min-width: 768px) {
+	footer {
+		border-radius: 5pt 5pt 0 0;
+	}
+}
+
+footer > hr,
+header > hr {
+	display: none;
+}
+
+footer :not(a).text-muted,
+footer a.text-muted:not(:hover) {
+	color: #687b7c;
+}

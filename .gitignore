@@ -10,6 +10,10 @@ auto-migrate.sh
 # The fuelphp core
 /fuel/core/
 
+# Login background images
+/public/assets/img/login/*
+!/public/assets/img/login/index.html
+
 # ==================
 # Created by https://www.toptal.com/developers/gitignore/api/fuelphp,phpstorm+all,netbeans,windows,linux,git,composer
 # Edit at https://www.toptal.com/developers/gitignore?templates=fuelphp,phpstorm+all,netbeans,windows,linux,git,composer

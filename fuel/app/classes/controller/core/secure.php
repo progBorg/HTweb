@@ -29,11 +29,17 @@ class Controller_Core_Secure extends Controller_Template
 	 * @var Model_User 
 	 */
 	protected $current_user;
+
+	/**
+	 * Whitelisted Gate methods
+	 *
+	 */
+	protected $whitelisted_gate_methods = ['login', 'logout', 'login_image'];
 	
 	public function before() {			
 		parent::before();
 
-		if (\Request::active()->controller !== 'Controller_Gate' or ! in_array(\Request::active()->action, array('login', 'logout'))) {
+		if (\Request::active()->controller !== 'Controller_Gate' or ! in_array(\Request::active()->action, $this->whitelisted_gate_methods)) {
 			if (!Auth::check()) {
 				// No user is logged in, this is a public request
 				$this->public_request = true;

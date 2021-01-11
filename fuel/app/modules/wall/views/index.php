@@ -36,5 +36,3 @@
 	
 	} ?>
 </div>
-
-<?php echo Asset::css('wall.css'); ?>

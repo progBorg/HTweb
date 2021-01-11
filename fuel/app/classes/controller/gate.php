@@ -1,4 +1,11 @@
 <?php
+
+use Auth\Auth;
+use Fuel\Core\Asset;
+use Fuel\Core\Config;
+use Fuel\Core\File;
+use Fuel\Core\Response;
+
 /**
  * Controller regulating access to protected pages. 
  * Implement this controller when a page needs logging in. 
@@ -42,6 +49,8 @@ class Controller_Gate extends Controller_Core_Theme
 			}
 		}
 
+		$this->push_css('login');
+
 		$this->title = 'Login';
 		$this->content = View::forge('gate/login', array('val' => $val), false);
 	}
@@ -50,5 +59,25 @@ class Controller_Gate extends Controller_Core_Theme
 		Auth::dont_remember_me();
 		Auth::logout();
 		Response::redirect('/');
+	}
+
+	/**
+	 * Returns a random background image
+	 *
+	 * @throws \Fuel\Core\HttpNotFoundException
+	 */
+	public function get_login_image() {
+		// Read login/ directory in image assets to find available pictures
+		$image_dir = DOCROOT . Config::get('asset.paths.0') . Config::get('asset.img_dir') . 'login/';
+		$images = File::read_dir($image_dir);
+		// Choose a random image
+		$image_string = $images[array_rand($images, 1)];
+
+		// Get full image path and
+		$image_path = $image_dir . $image_string;
+		$image_mimetype = File::file_info($image_path)['mimetype'];
+
+		// Send image inline
+		File::download($image_path, null, $image_mimetype, null, false, 'inline');
 	}
 }

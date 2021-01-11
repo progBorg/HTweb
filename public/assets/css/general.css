@@ -154,7 +154,7 @@ footer {
 	}
 }
 
-/*	Define some SVG filters.
+/*	Define some SVG filters to change their color.
 	SVG must be black, else prepend brightness(0) saturate(100%) to filter property.
 	https://codepen.io/sosuke/pen/Pjoqqp
  */
@@ -180,4 +180,19 @@ a:hover img[class*="filter-"] {
 /* Make navbar cut off overflow */
 .navbar .navbar-brand {
 	overflow: hidden;
+}
+
+/* Set up background div */
+html {
+	min-height: 100%;
+	position: relative;
+}
+#background {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	z-index: -1;
 }

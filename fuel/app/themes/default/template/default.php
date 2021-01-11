@@ -10,7 +10,7 @@
 	
 	echo Asset::css([
 		'font-awesome.css',
-		'styles.css',
+		'general.css',
 		]); 
 	
 	foreach ($add_css as $sheet) { 
@@ -29,12 +29,17 @@
 </head>
 <body>
 	<?=$partials['navbar']?>
+	<div id="background"></div>
 	<div class="container">
-		<?=$partials['header']?>
-		<div class="row">
+		<header class="row">
+			<?=$partials['header']?>
+		</header>
+		<div id="content-container" class="row">
 			<?=$content?>
 		</div>
-		<?=$partials['footer']?>
+		<footer class="row">
+			<?=$partials['footer']?>
+		</footer>
 	</div>
 </body>
 </html>

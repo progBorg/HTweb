@@ -3,7 +3,6 @@
 return [
 	'login' => [
 		'title' => 'Inloggen',
-		'msg' => 'Je staat op het punt het beveiligde deel van de site te betreden.',
 		'reset' => 'Ik ben mijn wachtwoord vergeten',
 		'btn' => 'Login',
 		'label' => [
