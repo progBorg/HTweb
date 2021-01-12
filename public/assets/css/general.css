@@ -147,10 +147,10 @@ footer {
 @media (max-width: 767px) {
 	/* Increase footer space on mobile */
 	body > .container {
-		padding-bottom: 150px;
+		padding-bottom: 155px;
 	}
 	footer {
-		height: 150px;
+		height: 155px;
 	}
 }
 
@@ -177,11 +177,23 @@ a:hover img[class*="filter-"] {
 	filter: invert(66%) sepia(17%) saturate(4893%) hue-rotate(122deg) brightness(91%) contrast(81%);
 }
 
+/**
+	Navbar stuff
+ */
 /* Make navbar cut off overflow */
 .navbar .navbar-brand {
 	overflow: hidden;
 }
+@media (max-width: 420px) {
+	/* Hide navbar title on very small screens */
+	.navbar-brand > span {
+		display: none !important;
+	}
+}
 
+/**
+	General background stuff
+ */
 /* Set up background div */
 html {
 	min-height: 100%;
@@ -194,5 +206,5 @@ html {
 	left: 0;
 	right: 0;
 	overflow: hidden;
-	z-index: -1;
+	z-index: -5;
 }
