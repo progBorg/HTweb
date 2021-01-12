@@ -3,14 +3,12 @@ foreach(Auth::groups() as $group) {
 	$group_options[$group->id] = $group->name;
 } 
 ?>
-
 <?=Form::open()?>
-	<div class="row">
 		<div class="col-md-6">
 			<div class="form-group">
 				<?=Form::label('Username', 'username', array('class'=>'control-label'))?>
 				<?=Form::input('username', Input::post('username', isset($user) ? $user->username : ''), array('class' => 'col-md-4 form-control', 'placeholder'=>'Username'))?>
-			</div>			
+			</div>
 			<div class="form-group">
 				<?=Form::label('Name', 'name', array('class'=>'control-label'))?>
 				<?=Form::input('name', Input::post('name', isset($user) ? $user->name : ''), array('class' => 'col-md-4 form-control', 'placeholder'=>'Name'))?>
@@ -63,8 +61,7 @@ foreach(Auth::groups() as $group) {
 				<?=Form::input('phone', Input::post('phone', isset($user) ? $user->phone : ''), array('class' => 'col-md-4 form-control', 'placeholder'=>'Phone'))?>
 			</div>
 			<div class="form-group">
-				<button class="btn btn-primary" type="submit" ><span class="fa fa-floppy-o"></span> <?=__('user.edit.btn')?></button>	
+				<button class="btn btn-primary" type="submit" ><span class="fa fa-floppy-o"></span> <?=__('user.edit.btn')?></button>
 			</div>
 		</div>
-	</div>
-<?=Form::close();
+<?=Form::close(); ?>

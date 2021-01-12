@@ -1,17 +1,14 @@
-<div class="row">
-	
-	<div class="col-md-4">
-		<div class="panel panel-default">
-			<div class="panel-heading"><?=__('actions.name')?></div>
-			<div class="panel-body">
-				<em><?=__('actions.no_actions')?></em>
-			</div>
+<div class="col-md-4">
+	<div class="panel panel-default">
+		<div class="panel-heading"><?=__('actions.name')?></div>
+		<div class="panel-body">
+			<em><?=__('actions.no_actions')?></em>
 		</div>
 	</div>
-	
-	<div class="col-md-8">
-		<?=Presenter::forge('overview', 'admin')?>
-	</div>
+</div>
+
+<div class="col-md-8">
+	<?=Presenter::forge('overview', 'admin')?>
 </div>
 
 <!-- Modal dialog for session deletion -->

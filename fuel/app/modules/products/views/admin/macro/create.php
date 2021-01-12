@@ -1,4 +1,4 @@
-<div class="container">
+<div class="col-lg-12">
 	<p><?=__('product.admin.create_macro.msg')?></p>
 	<?=Form::open(['action' => '/products/admin/macro/create', 'class' => 'form-horizontal'])?>
 	<div class="form-group">
@@ -28,4 +28,3 @@
 	<input type="submit" class="btn btn-primary btn-block" value="<?=__('product.admin.create_macro.btn')?>" />			
 	<?=Form::close()?>
 </div>
-
