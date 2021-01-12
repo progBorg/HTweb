@@ -30,6 +30,7 @@ class Controller_Core_Theme extends Controller_Core_View {
 		
 		// Set the default template
 		$this->theme = \Theme::instance();
+		//Todo Fix width problem in default template
 		$this->theme->set_template('template/default');
 		$this->theme->set_partial('navbar', 'partials/navbar');	
 		$this->theme->set_partial('footer', 'partials/footer');	

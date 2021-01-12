@@ -1,6 +1,5 @@
 #background {
 	background-image: url("/gate/login_image");
-	height: 100%;
 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -39,6 +38,7 @@ footer {
 	background-color: #fffd;
 	height: auto;
 	padding-top: 8pt;
+	z-index: -1;
 }
 @media (min-width: 768px) {
 	footer {

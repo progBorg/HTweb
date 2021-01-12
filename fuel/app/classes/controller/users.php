@@ -22,7 +22,9 @@ class Controller_Users extends Controller_Core_Theme
 
 	public function action_view($id = null)	{	
 		$user = \Utils::valid_user($id);
-		
+
+		$this->push_css('wall');
+
 		$data['user'] = $user;	
 		$this->title = __('user.name');
 		$this->sub_title = $user->get_fullname();

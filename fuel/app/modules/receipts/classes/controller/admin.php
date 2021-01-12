@@ -11,6 +11,7 @@ class Controller_Admin extends \Controller_Core_Theme {
 	
 	public function action_create() {
 		$this->title =__('receipt.title_admin');
+		$this->title_page = __('receipt.title_admin');
 		$this->title_sub = __('actions.create');
 		$data['sessions'] = \Sessions\Model_Session::fetch_setteable();
 		$data['products'] = \Products\Model_Product::get_settleable();
@@ -29,7 +30,8 @@ class Controller_Admin extends \Controller_Core_Theme {
 		$session_ids = \Input::post('sessions');
 		$product_ids = \Input::post('products');
 		
-		if(sizeof($session_ids) == 0 && sizeof($product_ids) == 0) {
+		if((is_null($session_ids) || sizeof($session_ids) == 0)
+				&& (is_null($product_ids) || sizeof($product_ids) == 0)) {
 			\Utils::handle_recoverable_error('A receipt should at least settle one or more sessions/products.', '/receipts/admin/create');
 		}
 		
