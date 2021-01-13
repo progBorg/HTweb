@@ -15,21 +15,12 @@
 	
 	foreach ($add_css as $sheet) { 
 		echo Asset::css($sheet . '.css');
-	} 
-	
-	echo Asset::js('jquery-3.1.1.min.js'); 
-	
-	echo \Theme::instance()->asset->js('bootstrap.min.js');
-	echo \Theme::instance()->asset->js('scripts.js');
-	
-	foreach ($add_js as $script) { 
-		echo Asset::js($script . '.js');
-	} 
-	?>	
+	}
+	?>
 </head>
 <body>
 	<?=$partials['navbar']?>
-	<div id="background"></div>
+	<div id="background" class="hidden-default"></div>
 	<div class="container">
 		<header class="row">
 			<?=$partials['header']?>
@@ -42,4 +33,14 @@
 		</footer>
 	</div>
 </body>
+<?php
+echo Asset::js('jquery-3.1.1.min.js');
+
+echo \Theme::instance()->asset->js('bootstrap.min.js');
+echo \Theme::instance()->asset->js('scripts.js');
+
+foreach ($add_js as $script) {
+	echo Asset::js($script . '.js');
+}
+?>
 </html>
