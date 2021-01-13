@@ -1,5 +1,6 @@
 #background {
 	background-image: url("/gate/login_image");
+	background-position: center;
 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -35,10 +36,9 @@
 }
 
 footer {
-	background-color: #fffd;
+	background-color: #fffa;
 	height: auto;
 	padding-top: 8pt;
-	z-index: -1;
 }
 @media (min-width: 768px) {
 	footer {
@@ -46,12 +46,23 @@ footer {
 	}
 }
 
-footer > hr,
-header > hr {
+footer > hr {
 	display: none;
+}
+header > div > hr {
+	visibility: hidden;
+}
+@media (max-width: 255px) {
+	/* Hide footer on screens that are too small */
+	footer {
+		display: none;
+	}
+	body > .container {
+		padding-bottom: 0;
+	}
 }
 
 footer :not(a).text-muted,
 footer a.text-muted:not(:hover) {
-	color: #687b7c;
+	color: #485b5c;
 }
