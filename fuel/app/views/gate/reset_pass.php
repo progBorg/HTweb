@@ -1,7 +1,7 @@
 <div class="col-lg-12">
+	<p>Enter your new password.</p>
 	<div class="row">
-		<p>Enter your new password.</p>
-		<div class="col-md-3">
+		<div class="col-md-3 col-sm-6">
 			<?php echo Form::open(array('action' => 'gate/reset/pass')); ?>
 
 				<div class="form-group">
