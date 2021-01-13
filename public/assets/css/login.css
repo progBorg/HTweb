@@ -7,26 +7,16 @@
 	-o-background-size: cover;
 	background-size: cover;
 
-	-webkit-animation: fadein 2s;
-	-moz-animation: fadein 2s;
-	-o-animation: fadein 2s;
-	animation: fadein 2s;
+	-webkit-transition: opacity 1.5s;
+	-moz-transition: opacity 1.5s;
+	-o-transition: opacity 1.5s;
+	transition: opacity 1.5s;
+	opacity: 1;
 }
-@-webkit-keyframes fadein {
-	from {opacity: 0;}
-	to {opacity: 1;}
-}
-@-moz-keyframes fadein {
-	from {opacity: 0;}
-	to {opacity: 1;}
-}
-@-o-keyframes fadein {
-	from {opacity: 0;}
-	to {opacity: 1;}
-}
-@keyframes fadein {
-	from {opacity: 0;}
-	to {opacity: 1;}
+#background.hidden-default {
+	/* Set up the background to wait until the page is loaded */
+	opacity: 0;
+	display: block !important;
 }
 
 .login-form {

@@ -50,6 +50,7 @@ class Controller_Gate extends Controller_Core_Theme
 		}
 
 		$this->push_css('login');
+		$this->push_js('gate/login');
 
 		$this->title = 'Login';
 		$this->content = View::forge('gate/login', array('val' => $val), false);
