@@ -80,7 +80,7 @@ class Controller_Paginated extends Controller_Auth {
 	/**
 	 * Execute given query with the pagination details as requested.
 	 * @param mixed $query The query
-	 * @return array [$raw_query_results, $tota_row_count]
+	 * @return array [$raw_query_results, $total_row_count]
 	 */
 	protected final function paginate_query($query) : array {
 		// Determine sort here instead of in before() method. This solves 
