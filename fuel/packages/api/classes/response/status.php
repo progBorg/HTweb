@@ -61,10 +61,12 @@ class Response_Status extends Response_Base {
 	 * @return \Api\Response_Status
 	 */
 	public static function _422($message='') {
+		$message = empty($message) ? $message : ': ' . $message;
 		return new \Api\Response_Status(422, "Unprocessable Entity" . $message);
 	}
 	
 	public static function _500($message='') {
+		$message = empty($message) ? $message : ': ' . $message;
 		return new \Api\Response_Status(500, "Internal server error" . $message);
 	}
 	
