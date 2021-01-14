@@ -1,6 +1,6 @@
 <hr/>
 
-<div class="col-sm-4 col-sm-push-4">
+<div id="footer-logo" class="col-sm-4 col-sm-push-4">
 	<p class="text-center">
 		<?= \Fuel\Core\Html::img('assets/img/logo/logo_small.svg', ['width' => '24px', 'class' => 'filter-text-color', 'style' => 'padding-bottom: 2pt']) ?>
 		<?=__('product_name')?>
@@ -23,7 +23,7 @@
 			<a href="https://github.com/ProgBorg/HVOweb" target="_blank" class="text-muted">
 				<i class="fa fa-github"></i> <u> <?=__('github')?></u>
 			</a> <br />
-			<?=__('fuel')?> <br />
+			<?=__('fuel', ['version' => \Fuel::VERSION])?> <br />
 			<strong><?=\FUEL::$env.' / '.\Utils::current_branch() . ' / ' . \Utils::get_short_head()?></strong>
 		</small>
 	</p>
