@@ -36,7 +36,7 @@ class Controller_Core_Secure extends Controller_Template
 	 */
 	protected $whitelisted_gate_methods = ['login', 'logout', 'login_image'];
 	
-	public function before() {			
+	public function before() {
 		parent::before();
 
 		if (\Request::active()->controller !== 'Controller_Gate' or ! in_array(\Request::active()->action, $this->whitelisted_gate_methods)) {

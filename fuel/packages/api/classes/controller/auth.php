@@ -3,6 +3,7 @@
 namespace Api;
 
 use Auth\Auth;
+use Controller_Core_Lang;
 use Fuel\Core\FuelException;
 
 /**
@@ -33,6 +34,9 @@ class Controller_Auth extends \Fuel\Core\Controller_Rest {
 		// Set default return format
 		$this->rest_format = 'json';
 		$this->format = 'json';
+
+		// Initialize localization, so it also works in Api calls
+		Controller_Core_Lang::load_localization();
 	}
 
 	/**

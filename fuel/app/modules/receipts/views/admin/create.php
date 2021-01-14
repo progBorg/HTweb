@@ -84,21 +84,3 @@
 		<button class="btn btn-primary" type="submit" ><span class="fa fa-pencil-square-o"></span> Create receipt</button>
 	</form>
 </div>
-
-<script>
-function checkAllSessions() {
-	$(".session-select").prop('checked', true);
-}
-
-function uncheckAllSessions() {
-	$(".session-select").prop('checked', false);
-}
-
-function checkAllProducts() {
-	$(".product-select").prop('checked', true);
-}
-
-function uncheckAllProducts() {
-	$(".product-select").prop('checked', false);
-}
-</script>

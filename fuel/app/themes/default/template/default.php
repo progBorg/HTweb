@@ -1,3 +1,8 @@
+<?php
+
+use Fuel\Core\Asset;
+
+?>
 <!DOCTYPE html>
 <html>
 <head>	
@@ -13,8 +18,8 @@
 		'general.css',
 		]); 
 	
-	foreach ($add_css as $sheet) { 
-		echo Asset::css($sheet . '.css');
+	foreach ($add_css as $sheet) {
+		echo Asset::css($sheet);
 	}
 	?>
 </head>
@@ -40,7 +45,7 @@ echo \Theme::instance()->asset->js('bootstrap.min.js');
 echo \Theme::instance()->asset->js('scripts.js');
 
 foreach ($add_js as $script) {
-	echo Asset::js($script . '.js');
+	echo Asset::js($script);
 }
 ?>
 </html>

@@ -16,7 +16,7 @@
 					<td><?=$token->token?>
 					<td><?=Date::forge($token->created_at)->format('%d/%m/%Y (%A)')?></td>
 					<td>
-						<a href="delete/<?=$token->id?>" class="clickable-row"><span class="fa fa-close"></span> <?=__('actions.remove')?></a>
+						<a href="admin/delete/<?=$token->id?>" class="clickable-row"><span class="fa fa-close"></span> <?=__('actions.remove')?></a>
 					</td>
 				</tr>
 				<?php } ?>
