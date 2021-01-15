@@ -35,7 +35,7 @@ namespace Sessions;
 			\Model_Notification::fire_notification('Vergeet de kosten niet',
 					'Je hebt nog geen kosten ingevoerd voor het eten van ' . \Utils::format_date($session->date),
 					'fa fa-cutlery',
-					'sessions/' . $date , $user_id, $type);
+					'sessions/' . $date , $user_id, $type . $date);
 		}
 	};
 });
