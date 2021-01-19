@@ -49,7 +49,7 @@ class Controller_Gate extends Controller_Core_Theme
 			}
 		}
 
-		$this->push_css('login');
+		$this->push_css('gate/login');
 		$this->push_js('gate/login');
 
 		$this->title = 'Login';
