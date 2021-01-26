@@ -128,6 +128,7 @@ class Controller_Gate_Reset extends Controller_Core_Theme {
 				$email->send();	
 			} catch (\Email\EmailSendingFailedException $ex) {
 				// Caught
+				\Fuel\Core\Log::error('Could not send email, reason: '. $ex->getMessage());
 			}
 		}
 			
