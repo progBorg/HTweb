@@ -21,9 +21,9 @@ return [
 		],
 		'mail' => [
 			'subject' => 'Password reset requested',
-			'body' => 'Hi, <br><br>A password reset was requested for the account on ' . __('site_title') . ' ' . __('site_sub') . ' which was registered using this mail address.' .
+			'body' => 'Hi, <br><br>A password reset was requested for the account on ' . __('site_title') . ' ' . __('site_sub') . ' which was registered using this mail address. ' .
 			'If you did not request your password to be reset, please ignore this mail. Otherwise, visit this link within the next hour to reset your password: <br><br>' .
-			'https://:link <br><br> --HVOweb Admin',
+			'<a href="https://:link">https://:link</a> <br><br> --HVOweb Admin',
 		],
 	],
 	'alert' => [

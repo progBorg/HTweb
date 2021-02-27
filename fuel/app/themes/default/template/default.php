@@ -1,10 +1,14 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html>
 <head>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?= isset($page_title) && empty($title) ? $page_title : $title?> | <?=__('site_title').' '.__('site_sub')?></title>
-	
+	<link rel="shortcut icon" href="/favicon.png" />
+
 	<?php 
 	echo \Theme::instance()->asset->css('bootstrap.min.css');
 	
@@ -13,8 +17,8 @@
 		'general.css',
 		]); 
 	
-	foreach ($add_css as $sheet) { 
-		echo Asset::css($sheet . '.css');
+	foreach ($add_css as $sheet) {
+		echo Asset::css($sheet);
 	}
 	?>
 </head>
@@ -40,7 +44,7 @@ echo \Theme::instance()->asset->js('bootstrap.min.js');
 echo \Theme::instance()->asset->js('scripts.js');
 
 foreach ($add_js as $script) {
-	echo Asset::js($script . '.js');
+	echo Asset::js($script);
 }
 ?>
 </html>

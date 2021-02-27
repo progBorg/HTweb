@@ -124,10 +124,11 @@ class Controller_Gate_Reset extends Controller_Core_Theme {
 				$email = \Email::forge();
 				$email->to($mail, $user->get_fullname());
 				$email->subject(__('gate.reset.mail.subject'));
-				$email->body(__('gate.reset.mail.body', ['link' => 'hettribunaal.nl/gate/reset?token=' . $token]));
+				$email->body(__('gate.reset.mail.body', ['link' => 'home.hetverreoosten.com/gate/reset?token=' . $token]));
 				$email->send();	
 			} catch (\Email\EmailSendingFailedException $ex) {
 				// Caught
+				Log::error('Could not send email, reason: '. $ex->getMessage());
 			}
 		}
 			

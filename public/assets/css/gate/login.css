@@ -28,12 +28,16 @@
 footer {
 	background-color: #fffa;
 	height: auto;
-	padding-top: 8pt;
 }
 @media (min-width: 768px) {
 	footer {
 		border-radius: 5pt 5pt 0 0;
+		padding-top: 8pt;
 	}
+}
+
+#footer-logo {
+	top: 15pt;
 }
 
 footer > hr {

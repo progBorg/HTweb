@@ -10,19 +10,25 @@ class Controller_Admin extends \Controller_Core_Theme {
 	}
 	
 	public function action_create() {
+		$data['sessions'] = \Sessions\Model_Session::fetch_setteable();
+		$data['products'] = \Products\Model_Product::get_settleable();
+
+		$this->push_js('receipts/admin_create');
+
 		$this->title =__('receipt.title_admin');
 		$this->title_page = __('receipt.title_admin');
 		$this->title_sub = __('actions.create');
-		$data['sessions'] = \Sessions\Model_Session::fetch_setteable();
-		$data['products'] = \Products\Model_Product::get_settleable();
 		$this->content = \View::forge('admin/create', $data);
 	}
 	
 	public function action_index() {
+		$data['receipts'] = Model_Receipt::find('all');
+
+		$this->push_js('receipts/admin_index');
+
 		$this->title = __('receipt.title_admin');
 		$this->title_page = __('receipt.title_admin');
-		$this->title_sub = __('privileges.perm.manage');	
-		$data['receipts'] = Model_Receipt::find('all');		
+		$this->title_sub = __('privileges.perm.manage');
 		$this->content = \View::forge('admin/index', $data);
 	}
 
@@ -236,11 +242,11 @@ class Controller_Admin extends \Controller_Core_Theme {
 			}
 		}
 	}
-	
+
 	/**
 	 * Update the user receipt for given user on given receipt with given deltas
-	 * @param type $user_id
-	 * @param type $receipt_id 
+	 * @param int $user_id
+	 * @param int $receipt_id
 	 * @param float $b_delta Point delta
 	 * @param float $p_delta Balance delta
 	 */

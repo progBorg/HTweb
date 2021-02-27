@@ -8,7 +8,7 @@ return array(
 	'settings' => 'Instellingen',
 	'me' => 'Profiel bekijken',
 	'render' => 'Pagina geladen in {exec_time}s met {mem_usage}mb geheugen.',
-	'fuel' => 'Gebouwd met FuelPHP 1.8.3',
+	'fuel' => 'Gebouwd met FuelPHP :version',
 	'github' => 'Bijdragen op GitHub',
 	'product_name' => 'HVOweb',
 	'dev' => 'Ontwikkeld door',

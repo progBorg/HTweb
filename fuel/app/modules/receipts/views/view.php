@@ -1,27 +1,5 @@
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
-
 <script>
-	$(function() {
-	
-	Morris.Bar({
-		element: 'distr-bar-chart',
-		data: [
-			<?php foreach($receipt->get_users() as $user_receipt): ?>
-			{
-				y: '<?= addslashes($user_receipt->user->name)?>',
-				a: '<?=$user_receipt->points?>',
-				b: '<?=$user_receipt->balance?>'
-			},
-			<?php endforeach; ?>
-		],
-		xkey: 'y',
-		ykeys: ['a', 'b'],
-		labels: ['<?=__('session.field.point_plural')?>', '<?=__('receipt.field.balance')?>']
-	  });
-    
-});
+let receipt_id = <?= $id ?>;
 </script>
 
 <div class="col-lg-12">

@@ -198,7 +198,7 @@ final class Context_Sessions extends \Context_Base {
 		if($this->_is_settled()) {
 			return false;
 		}
-			
+
 		if(isset($this->cur_enrollment)) {
 			return $this->cur_enrollment->cook;
 		}

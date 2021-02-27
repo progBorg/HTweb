@@ -64,7 +64,7 @@ class Controller_Admin extends \Controller_Core_Theme {
 		$permission = \Auth\Model\Auth_Permission::find($id);
 		
 		if(empty($permission)) {
-			\Utils::handle_irrecoverable_error(__('privileges.alert.error.no_permission', ['id' => $perm_id]));
+			\Utils::handle_irrecoverable_error(__('privileges.alert.error.no_permission', ['id' => $id]));
 		}
 		
 		$user_permission = \Auth\Model\Auth_Userpermission::query()
