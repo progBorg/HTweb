@@ -1,11 +1,5 @@
 <?php
 
-use Auth\Auth;
-use Fuel\Core\Asset;
-use Fuel\Core\Config;
-use Fuel\Core\File;
-use Fuel\Core\Response;
-
 /**
  * Controller regulating access to protected pages. 
  * Implement this controller when a page needs logging in. 
@@ -65,7 +59,9 @@ class Controller_Gate extends Controller_Core_Theme
 	/**
 	 * Returns a random background image
 	 *
-	 * @throws \Fuel\Core\HttpNotFoundException
+	 * @throws FileAccessException
+	 * @throws HttpNotFoundException
+	 * @throws InvalidPathException
 	 */
 	public function get_login_image() {
 		// Read login/ directory in image assets to find available pictures
@@ -78,7 +74,7 @@ class Controller_Gate extends Controller_Core_Theme
 		]);
 		// Return a 404 if no images were found
 		if (is_null($images) or sizeof($images) == 0) {
-			throw new \Fuel\Core\HttpNotFoundException;
+			throw new HttpNotFoundException;
 		}
 
 		// Choose a random image
