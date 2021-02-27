@@ -8,7 +8,7 @@ return array(
 	'settings' => 'Settings',
 	'me' => 'View profile',
 	'render' => 'Page rendered in {exec_time}s using {mem_usage}mb of memory.',
-	'fuel' => 'Build using FuelPHP 1.8.3',
+	'fuel' => 'Build using FuelPHP :version',
 	'github' => 'Contribute on GitHub',
 	'product_name' => 'HVOweb',
 	'dev' => 'Developed by',

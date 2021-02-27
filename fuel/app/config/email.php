@@ -43,7 +43,7 @@ return array(
 		/**
 		 * Mail useragent string
 		 */
-		'useragent' => 'FuelPHP, PHP 5.3 Framework',
+		'useragent' => 'FuelPHP, PHP 7.4 Framework',
 
 		/**
 		 * Mail driver (mail, smtp, sendmail, noop)
@@ -80,8 +80,8 @@ return array(
 		 * Default sender details
 		 */
 		'from' => array(
-			'email' => 'no-reply@hettribunaal.nl',
-			'name'  => 'Het Tribunaal Web',
+			'email' => 'no-reply@hetverreoosten.com',
+			'name'  => 'HVO Web',
 		),
 
 		/**

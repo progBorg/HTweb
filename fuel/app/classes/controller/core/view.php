@@ -1,7 +1,5 @@
 <?php
 
-use Fuel\Core\Str;
-
 /**
  * Provides basic utilities for view generating controllers such as
  * additional stylesheet and script injection as well as setting a current_user
@@ -60,11 +58,11 @@ class Controller_Core_View extends Controller_Core_Lang {
 		parent::before();
 		
 		// Set global current_user for view
-		\View::set_global('current_user', $this->current_user);
+		View::set_global('current_user', $this->current_user);
 	}
 	
 	public function after($reponse) {
-		$theme = \Theme::instance();
+		$theme = Theme::instance();
     
 		// Inject CSS and JS files into template
 		$theme->get_template()

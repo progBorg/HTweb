@@ -242,11 +242,11 @@ class Controller_Admin extends \Controller_Core_Theme {
 			}
 		}
 	}
-	
+
 	/**
 	 * Update the user receipt for given user on given receipt with given deltas
-	 * @param type $user_id
-	 * @param type $receipt_id 
+	 * @param int $user_id
+	 * @param int $receipt_id
 	 * @param float $b_delta Point delta
 	 * @param float $p_delta Balance delta
 	 */

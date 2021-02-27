@@ -1,9 +1,5 @@
 <?php
 
-use Fuel\Core\Event;
-use Fuel\Core\Request;
-use Fuel\Core\View;
-
 class Controller_Notifications_Dropdown extends Controller_Core_Lang {
 	
 	public function before() {
