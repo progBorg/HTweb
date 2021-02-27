@@ -2,7 +2,7 @@
 
 <div id="footer-logo" class="col-sm-4 col-sm-push-4">
 	<p class="text-center">
-		<?= \Fuel\Core\Html::img('assets/img/logo/logo_small.svg', ['width' => '24px', 'class' => 'filter-text-color', 'style' => 'padding-bottom: 2pt']) ?>
+		<?= Html::img('assets/img/logo/logo_small.svg', ['width' => '24px', 'class' => 'filter-text-color', 'style' => 'padding-bottom: 2pt']) ?>
 		<?=__('product_name')?>
 	</p>
 </div>

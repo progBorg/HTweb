@@ -53,3 +53,19 @@ Please note there's a strict order in which to run migrations:
 Oil has a built-in web server. Run the server using `oil s`.
 
 Alternatively you can use any webserver that uses the `/public/` directory as document root.
+
+## Notes
+
+### Autocompletion in IDEs
+FuelPHP core classes are aliased to the global namespace, which means that for example \\View refers to \\Fuel\\Core\\View if no \\View already exists.
+Most IDEs are not aware of this.
+
+To make them aware, the file `autocomplete.php` is included at the root of the project.
+Fuelphp doesn't use this file, but it allows your IDE to be able to autocomplete code and understand the origins of Fuel classes.
+
+Although the file already exists, a task is included to generate it, which may be run with the command below.
+This will output to the terminal. You may copy-paste or redirect it to a file, but check it first!
+
+```bash
+php oil r ccc -core -packages -without=tasks+migrations+vendor+tests+oil+orm+parser
+```
